@@ -25,6 +25,9 @@ router.get('/settings', (req, res)=> {
 router.get('/@:username', (req, res)=> {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
+router.get('/@:username/favorite', (req, res)=> {
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+})
 router.get('/article/:slug', (req, res)=> {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
