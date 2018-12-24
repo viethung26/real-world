@@ -14,6 +14,7 @@ router.param('slug', (req, res, next, slug)=> {
 
 router.post('/', auth.required, (req, res, next)=> {
     let {body, description, tagList, title} = req.body.article
+    console.log(tagList)
     if(!req.user) {
         res.sendStatus(401)
     } else {

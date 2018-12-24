@@ -9,7 +9,7 @@ let ArticleSchema = new Schema({
     title: {type: String, required: [true, "can't be blank"]},
     description: {type: String, required: [true, "can't be blank"]},
     body: {type: String, required: [true, "can't be blank"]},
-    tagList: [{type: String}],
+    tagList: [{type: String, lowercase: true}],
     favoritesCount: {type: Number, default: 0},
     comments: [{type: ObjectId, ref: "comments"}],
     author: {type: mongoose.Schema.Types.ObjectId, ref: "users"}
